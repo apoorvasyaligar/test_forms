@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="form-container">
+    <h2 class="form-heading">Get My data</h2>
+    <form action="" method="post" class="form">
+        <div class="input-field">
+            <label for="{{ form.name.id_for_label }}">Name</label>
+            {{form.name}}
+            {{form.name.errors}}
+        </div>
+        <div class="input-field">
+            <label for="{{ form.date_of_birth.id_for_label }}">Date of birth</label>
+            {{form.date_of_birth}}
+            {{form.date_of_birth.errors}}
+        </div>
+
+        <div class="input-field">
+            <label for="{{ form.gender.id_for_label }}">Gender</label>
+            {{form.gender}}
+            {{form.gender.errors}}
+        </div>
+        <div class="input-field">
+            <label for="{{ form.address.id_for_label }}">Address</label>
+            {{form.address}}
+            {{form.address.errors}}
+        </div>
+        <div class="input-field">
+            <label for="{{ form.email.id_for_label }}">Email</label>
+            {{form.email}}
+            {{form.email.errors}}
+        </div>
+        <div class="input-field">
+            <label for="{{ form.phone_number.id_for_label }}">Phone number</label>
+            {{form.phone_number}}
+            {{form.phone_number.errors}}
+        </div>
+        {% csrf_token %}
+        <button type="submit">Submit</button>
+    </form>
+    </div>
+{% endblock content %}
