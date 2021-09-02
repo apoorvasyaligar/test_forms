@@ -1,0 +1,33 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    width: 100%;
+    min-height: 100%;
+}
+
+.form-heading {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+.form-container {
+    width: 80%;
+    margin: auto;
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2);
+    padding: 1rem .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    width: 70%;
+   display: flex; 
+   flex-direction: column;
+   justify-content: center;
+}
+
