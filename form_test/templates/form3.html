@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Info Form</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+  <link rel="stylesheet" type="text/css" href="css/form3style.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+  <section style="width: 830px;" class="begin">
+    <div class="heading" style="font-size: large; text-align: center; margin-right: 90px;">
+      <h1><b>Get My Data</b></h1><br>
+    </div>
+
+    <div class="container">
+      <ul class="progressbar">
+        <li></li>
+        <li></li>
+        <li class="active"></li>
+      </ul>
+    </div>
+    <br>
+  </section>
+  <div class="custom-form">
+    <form action="" method="POST" class="custom-centered">
+      <section class="section">
+        <div class="container">
+          <div class="columns">
+            <div class="column">
+              <div class="field">
+
+
+                <div class="heading" style="font-size: large;">
+                  <h1><b>Confirm Request To Get Your Clinical Data</b></h1><br>
+                </div>
+                <label class="labelprop">My Health Data Categories to Fetch:</label>
+                <!-- <div class="control"> -->
+                <!-- <input type="text" id="patientname" name="patientname" size="35"><br> -->
+
+                  <label for="Everything">Everything</label>
+                <input type="radio" class="radiodata1" id="Everything" name="choice" value="Everything">
+                 
+                  <label for="Nonsensitivedata">Non sensitive data</label>
+                <input type="radio" class="radiodata2" id="Nonsensitivedata" name="choice" value="Nonsensitivedata"><br>
+                <!-- </div> -->
+              </div>
+              <div class="field">
+                <!-- <input type="text" id="country" name="country" value="Norway" size="90" style="height: 80px; text-align: left; padding: 1px 1px 1px 1px;" readonly> -->
+                <textarea rows="3" cols="93" style="text-align: left;" readonly>
+              By Signing this request you are authorizing and providing consent for XYZ Health Plan to reach out to your prior health plan and request your clinical data. If available we will retrieve your clinical information and the compatible data will be made available via the patient access APIs. 
+                </textarea>
+              </div>
+              <div class="field">
+                <label class="labelprop">Your Name:</label>
+                <!-- <div class="control"> -->
+                <input type="text" id="patientname" name="patientname" size="35"><br>
+                <!-- </div> -->
+              </div>
+              <div class="field">
+                <label class="labelprop">Date:</label>
+                <!-- <div class="control"> -->
+                <input type="text" id="patientname" name="patientname" size="35"><br>
+                <!-- </div> -->
+              </div>
+              <div class="field">
+                <label class="labelprop">Your Signature:</label>
+                <!-- <div class="control"> -->
+                <input type="text" id="patientname" name="patientname" size="35" style="height: 80px;"><br>
+                <!-- </div> -->
+              </div>
+
+
+
+
+              <button class="button button2">Yes</button>
+              <button class="button button3">Decline</button>
+
+
+
+
+
+
+              <!-- <div class="field is-grouped" style="margin-top: 10px;">
+            <div class="control">
+              <button class="button is-link" value="Submit">Submit</button>
+              <input type="button" value="Yes" class="button is-link" id="yesbtn">
+            </div>
+          </div>
+          <div>
+            <div class="control"> -->
+              <!-- <button class="button is-link" value="Submit">Submit</button>
+              <input type="button" value="Decline" class="button is-link" id="declinebtn"> -->
+              <!-- </div>
+          </div> -->
+
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </form>
+  </div>
+</body>
+
+</html>

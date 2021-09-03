@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block stylesheet %}  <link rel="stylesheet" href="{% static 'css/form2style.css' %}">{% endblock stylesheet %}
+{% block content %} 
+    <section style="width: 720px;" class="begin">
+        <div class="heading" style="font-size: large; text-align: center; margin-right: 55px;">
+        <h1><b>Get My Data</b></h1><br>
+        </div>
+
+        <div class="container">
+        <ul class="progressbar">
+            <li class="active"></li>
+            <li ></li>
+            <li ></li>
+        </ul>
+        </div>
+        <br>
+    </section>
+
+   
+<div class="custom-form">
+    <form action="register4.html" method="post">
+        <section class="section">
+            <div class="container">
+              <div class="columns">
+                <div class="column">
+                  <div class="field">
+                    <div class="heading" style="font-size: large;">
+                        <h1><b>Confirm My Information</b></h1><br>
+                    </div>
+                    <label for="{{ form.name.id_for_label }}">Name:</label>
+                    {{form.name}}
+                    {{form.name.errors}}
+             
+                  </div>
+                   <div class="field">
+                   <label for="{{ form.date_of_birth.id_for_label }}">Date of Birth:</label>
+                   {{form.date_of_birth}}
+                   {{form.date_of_birth.errors}}
+                   </div>
+                   <div class="field">
+                   <label for="{{ form.gender.id_for_label }}">Your Gender:</label>
+                    {{form.gender}}
+                    {{form.gender.errors}}
+                    </div>
+                    <div class="field">
+                    <label for="{{ form.address.id_for_label }}">Address:</label>
+                    {{form.address}}
+                    {{form.address.errors}}
+                    </div>
+                    <div class="field">
+                    <label for="{{ form.email.id_for_label }}">Email:</label>
+                    {{form.email}}
+                    {{form.email.errors}}
+                    </div>
+                    <div class="field">
+                    <label for="{{ form.phone_number.id_for_label }}">Phone Number:</label>
+                    {{form.phone_number}}
+                    {{form.phone_number.errors}}
+                    </div>
+                    {% csrf_token %}
+                    <div class="field is-grouped" style="margin-top: 10px;">      
+                        <input type="submit" value="Continue" class="button is-link">                      
+                    </div>
+                </div>
+               </div>
+            </div>
+        </section>
+    </form>
+</div>
+    
+{% endblock content %}

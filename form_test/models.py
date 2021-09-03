@@ -22,5 +22,6 @@ class PriorHealthPlanModel(models.Model):
 
 class ConsentDateModel(models.Model):
     data_categories_to_fetch = models.CharField(max_length=100)
+    signature_name=models.CharField(max_length=100,default="yourname")
     date = models.DateField()
     signature_url = models.CharField(max_length=100)
