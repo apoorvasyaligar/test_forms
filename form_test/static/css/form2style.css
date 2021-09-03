@@ -8,11 +8,12 @@ label {
     border-radius: 8px;
     box-sizing: border-box;
     box-shadow: inset;
-    
+   width: 40%; 
+   margin: auto;
     margin-top: 10px;
     margin-bottom: 130px;
-    margin-right: 450px;
-    margin-left: 500px;
+    /* margin-right: 450px; */
+    /* margin-left: 500px; */
     
 }
 .container {

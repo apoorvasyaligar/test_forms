@@ -31,11 +31,11 @@
                     <label for="{{ form.data_categories_to_fetch.id_for_label }}" class="labelprop">My Health Data Categories to Fetch:</label>
                     {{form.data_categories_to_fetch}}
                     {{form.data_categories_to_fetch.errors}}
-                    <label for="Everything">Everything</label>
-                    <input type="radio" class="radiodata1" id="Everything" name="choice" value="Everything">
+                    {% comment %} <label for="Everything">Everything</label> {% endcomment %}
+                    {% comment %} <input type="radio" class="radiodata1" id="Everything" name="choice" value="Everything">
                  
                     <label for="Nonsensitivedata">Non sensitive data</label>
-                    <input type="radio" class="radiodata2" id="Nonsensitivedata" name="choice" value="Nonsensitivedata"><br>
+                    <input type="radio" class="radiodata2" id="Nonsensitivedata" name="choice" value="Nonsensitivedata"><br> {% endcomment %}
              
                   </div>
                    <div class="field">

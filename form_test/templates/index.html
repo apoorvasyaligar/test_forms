@@ -37,7 +37,8 @@
 				<span class="login100-form-title p-b-41">
 
 				</span>
-				<form class="login100-form validate-form p-b-25 p-t-0" action="register2.html">
+				<form class="login100-form validate-form p-b-25 p-t-0" method="post">
+                {% csrf_token %}
 					<div style="padding-left: 15px; padding-top: 25px;min-width: 240px;">
 						<input class="btn btn-secondary" type="button" value="SIGN IN" style="border-radius: 20px;">
 						<input class="btn btn-secondary" type="button" value="SIGN UP" style="border-radius: 20px;">

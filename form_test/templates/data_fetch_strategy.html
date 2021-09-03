@@ -19,19 +19,16 @@
 
    
 <div class="custom-form">
-    <form action="register1.html" method="post" class="custom-centered">
+    <form method="post" class="custom-centered">
         <section class="section">
             <div class="heading" style="font-size: large;">
                 <h1><b>How to Get Your Data</b></h1><br>
             </div>
-
-
-
-
-            <button class="button button2" style="width: 200px; height: 150px;" type="submit"
-                formaction="form1.html">Request my data <br>via my new Health <br>Plan</button>
+            <a class="button button2" style="width: 200px; height: 150px;" type="submit"
+                href="{% url 'prior_health_plan' %}">Request my data <br>via my new Health <br>Plan</a>
+            
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="button button2" style="width: 200px; height: 150px;" formaction="form1.html">Fetch the
+            <button class="button button2" style="width: 200px; height: 150px;" formaction="{% url 'prior_health_plan' %}">Fetch the
                 data myself</button>
 
         </section>
