@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
-{% block content %}
+{% load static %}
+{% block stylesheet %}  <link rel="stylesheet" href="{% static 'css/main.css' %}">{% endblock stylesheet %}
+{% block content %} 
     <div class="form-container">
     <h2 class="form-heading">Get My data</h2>
     <form action="" method="post" class="form">
