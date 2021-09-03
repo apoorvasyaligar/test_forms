@@ -1,10 +1,11 @@
-from django.http.response import HttpResponse
+from django.http.response import HttpResponse, JsonResponse
 
 # from .forms import TestForm
 from django.shortcuts import redirect, render
 from .forms import ConsentDateForm, PriorHealthPlanForm, RegisterForm
 from .models import ConsentDateModel, PriorHealthPlanModel, RegisterModel
 import json
+import requests
 
 # Create your views here.
 
@@ -62,7 +63,19 @@ def consent_date_form_view(request):
                 "%d-%m-%Y"
             )
             final_data_json = json.dumps(final_data)
-            return HttpResponse(final_data_json)
+            patient_resource = {
+                "resourceType": "Patient",
+                "birthdate": final_data["date_of_birth"],
+                "name": {"text": final_data["your_name"]},
+                "gender": "male" if final_data["gender"] == "M" else "female",
+                "telecom": final_data["phone_number"],
+            }
+            patient_resource_json = json.dumps(patient_resource)
+            BASE_URL = "http://fhir.hl7fundamentals.org/r4/"
+            RESOURCE = "Patient"
+            res = requests.post(f"{BASE_URL}/{RESOURCE}", patient_resource_json)
+            return JsonResponse(json.loads(res.content))
+
         return HttpResponse("unsuccessful")
     else:
         form = ConsentDateForm()
